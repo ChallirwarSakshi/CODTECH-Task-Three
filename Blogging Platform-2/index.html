@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogging Platform-2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="SC Logo" class="logo-img">
+            </a>
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">Subscribe</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="options">
+                <div class="searchBox" title="Search">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search-alt-2 search-icon'></i>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search-alt-2 search-icon'></i>
+                    </div>
+                </div><br>
+                <div class="otherBox" title="Inbox">
+                    <i class='bx bx-message'></i>               
+                </div>
+                <div class="otherBox" title="Notification">
+                    <i class='bx bx-bell'></i>
+                </div>
+                <div class="otherBox" title="New Release">
+                    <i class='bx bx-news'></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-wrapper">
+            <img src="images/profilepic.png" alt="" class="profilepic">
+        </div>
+
+        <div class="submenu-wrapper">
+            <div class="submenu">
+                <div class="user-info">
+                    <img src="images/profilepic.png" alt="Profile" class="submenu-profilepic">
+                    <span class="submenu-name">Sakshi Challirwar</span>
+                </div>
+                <ul class="submenu-links">
+                    <li><a href="#"><i class="bx bx-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="bx bx-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="bx bx-log-out"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sub-navbar -->
+    <div class="sub-navbar">
+      <div class="sub-navbar-content">
+        <a href="http://127.0.0.1:5503/" class="back-button">
+          <i class="bx bx-arrow-back"></i> BACK
+        </a>
+        
+        <div class="sub-nav-links">
+          <a href="#">
+            <button class="save-button">SAVE</button>
+          </a>
+          <a href="#">
+            <button class="publish-button">PUBLISH</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="#">
+                    <i class="bx bx-brain"></i>
+                    <span>AI Tools</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-line-chart"></i>
+                    <span>SEO</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-globe"></i>
+                    <span>Translate</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-grid-alt"></i>
+                    <span>Apps</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Writting Area -->
+    <div class="container">
+        <div class="options">
+          <button id="bold" class="option-button format">
+            <i class="fa-solid fa-bold"></i>
+          </button>
+          <button id="italic" class="option-button format">
+            <i class="fa-solid fa-italic"></i>
+          </button>
+          <button id="underline" class="option-button format">
+            <i class="fa-solid fa-underline"></i>
+          </button>
+          <button id="strikethrough" class="option-button format">
+            <i class="fa-solid fa-strikethrough"></i>
+          </button>
+          <button id="superscript" class="option-button script">
+            <i class="fa-solid fa-superscript"></i>
+          </button>
+          <button id="subscript" class="option-button script">
+            <i class="fa-solid fa-subscript"></i>
+          </button>
+  
+          <button id="insertOrderedList" class="option-button">
+            <div class="fa-solid fa-list-ol"></div>
+          </button>
+          <button id="insertUnorderedList" class="option-button">
+            <i class="fa-solid fa-list"></i>
+          </button>
+  
+          <button id="undo" class="option-button">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+          <button id="redo" class="option-button">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+  
+          <button id="createLink" class="adv-option-button">
+            <i class="fa fa-link"></i>
+          </button>
+          <button id="unlink" class="option-button">
+            <i class="fa fa-unlink"></i>
+          </button>
+  
+          <button id="justifyLeft" class="option-button align">
+            <i class="fa-solid fa-align-left"></i>
+          </button>
+          <button id="justifyCenter" class="option-button align">
+            <i class="fa-solid fa-align-center"></i>
+          </button>
+          <button id="justifyRight" class="option-button align">
+            <i class="fa-solid fa-align-right"></i>
+          </button>
+          <button id="justifyFull" class="option-button align">
+            <i class="fa-solid fa-align-justify"></i>
+          </button>
+          <button id="indent" class="option-button spacing">
+            <i class="fa-solid fa-indent"></i>
+          </button>
+          <button id="outdent" class="option-button spacing">
+            <i class="fa-solid fa-outdent"></i>
+          </button>
+  
+          <select id="formatBlock" class="adv-option-button">
+            <option value="H1">H1</option>
+            <option value="H2">H2</option>
+            <option value="H3">H3</option>
+            <option value="H4">H4</option>
+            <option value="H5">H5</option>
+            <option value="H6">H6</option>
+          </select>
+  
+          <select id="fontName" class="adv-option-button"></select>
+          <select id="fontSize" class="adv-option-button"></select>
+  
+          <div class="input-wrapper">
+            <input type="color" id="foreColor" class="adv-option-button" />
+            <label for="foreColor">Font Color</label>
+          </div>
+          <div class="input-wrapper">
+            <input type="color" id="backColor" class="adv-option-button" />
+            <label for="backColor">Highlight Color</label>
+          </div>
+        </div>
+  
+        <div id="new-text-box" contenteditable="true"></div>
+  
+        <div id="text-input" contenteditable="true"></div>
+      </div>
+
+      <!-- Scripts -->
+      <script src="script.js"></script>
+    </body>
+  </html>
