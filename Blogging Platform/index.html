@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogger's Palette</title> 
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="SC Logo" class="logo-img">
+            </a>
+            <a href="#" class="login" onclick="openModal()">Login / Sign Up</a>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h1 class="home-title">Blogger's Palette</h1>
+            <p class="home-subtitle"><i>A creative space where every blog tells a story...</i></p>
+            <a href="http://127.0.0.1:5501/index.html" class="write" aria-label="Create Your Blog">Create Your Blog</a>
+        </div>
+    </section>
+
+    <div id="login-signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="tabs">
+                <button id="login-tab" class="tab active" onclick="switchTab('login')">Login</button>
+                <button id="signup-tab" class="tab" onclick="switchTab('signup')">Sign Up</button>
+            </div>
+
+            <div id="login-form" class="form-container active">
+                <h2>Login</h2>
+                <form id="login-form-submit" action="#" method="POST">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="email" required>
+
+                    <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" required>
+
+                    <button type="submit" class="submit-btn" id="login-submit">Login</button>
+                </form>
+            </div>
+
+            <div id="signup-form" class="form-container">
+                <h2>Sign Up</h2>
+                <form id="signup-form-submit" action="#" method="POST">
+                    <label for="signup-username">Full Name</label>
+                    <input type="text" id="signup-username" name="name" required>
+
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" name="email" required>
+
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+
+                    <button type="submit" class="submit-btn" id="signup-submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secondpage Section -->
+    <section class="secondpage container" id="secondpage">
+        <div class="contentBx">
+            <h2 class="titleText">Launch Your Blog with Creativity and Purpose</h2>
+            <p class="title-text">"Every blog is a brushstroke, each post a piece of the canvas. Here, creativity flows, stories unfold, and voices find their space in the world."</p>
+            <a href="#" class="btn1">Start Your Blogging Journey Today</a>
+        </div><br><br>
+        <div class="imgBx">
+            <img src="images/secondpgimage.gif" alt="Secondpage Image" class="fitBg">
+        </div>
+    </section>
+
+    <!-- Thirdpage Section -->
+    <section class="thirdpage" id="thirdpage">
+        <div class="thirdpage container">
+            <h1 class="thirdpage-title">Blog templates to kickstart your success</h1>
+            <p class="thirdpage-subtitle">
+                Pick from over 700+ free, fully customizable templates equipped <br>with all the essentials.
+            </p>
+            <br>
+            <a href="#" class="btn2"><b><u>Explore Templates</u> →</b></a>
+        </div>
+        <br>
+        <div class="temp-scroll-wrapper">
+            <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button>
+            <div class="temp-scroll">
+                <div class="child">
+                    <img class="child-img" src="images/temp1.png" alt="Template 1">
+                </div>
+                <div class="child">
+                    <img class="child-img" src="images/temp2.png" alt="Template 2">
+                </div>
+                <div class="child">
+                    <img class="child-img" src="images/temp3.png" alt="Template 3">
+                </div>
+                <div class="child">
+                    <img class="child-img" src="images/temp4.png" alt="Template 4">
+                </div>
+                <div class="child">
+                    <img class="child-img" src="images/temp5.png" alt="Template 5">
+                </div>
+                <div class="child">
+                    <img class="child-img" src="images/temp6.png" alt="Template 6">
+                </div>
+                <div class="child">
+                    <img class="child-img" src="images/temp7.png" alt="Template 7">
+                </div>
+                <div class="child">
+                    <img class="child-img" src="images/temp8.png" alt="Template 8">
+                </div>
+                <div class="child">
+                    <img class="child-img" src="images/temp9.png" alt="Template 9">
+                </div>
+            </div>
+            <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Fourthpage Section -->
+    <section class="fourthpage" id="fourthpage">
+        <div class="container">
+            <h2 class="description"><b>Shape your blog to reflect your vision</b></h2><br>
+            <div class="features">
+                <div class="feature">
+                    <h3>Craft a Unique Blog</h3>
+                    <p>Express your brand’s personality and values through an array of powerful design features that enable you to craft a blog that truly stands out.
+                    </p>
+                </div>
+                <div class="feature">
+                    <h3>Claim Your Own Domain</h3>
+                    <p>Establish credibility and trust with a personalized domain name. Use our Blog Name Generator to discover the perfect name for your blog.
+                    </p>
+                </div>
+                <div class="feature">
+                <h3>Create Content that Resonates</h3>
+                <p>Effortlessly share your stories with our user-friendly content editor. Enhance your posts with multimedia options like videos and audio to engage your audience like never before.
+                </p>
+                </div>
+            </div>
+            <a href="#" class="btn3">Start Blogging</a>
+        </div>
+    </section>
+
+    <!-- Fifthpage Section -->
+    <section class="fifthpage" id="fifthpage">
+        <div class="fifthpage container">
+            <img src="images/fifthpgimg.jpg" alt="" class="picture">
+        </div>
+    </section>
+
+    <!-- Sixthpage Section -->
+    <section class="sixthpage" id="sixthpage">
+        <div class="sixthpage container">
+            <h1 class="section-title">Robust foundation for your blog</h1>
+            <div class="sixthpage-content">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-shield-alt"></i> 
+                    </div>
+                    <h2 class="card-title">Advanced security</h2>
+                    <p class="card-description">Our dedicated team of experts and cutting-edge security measures work around the clock to ensure your audience’s data remains protected and confidential.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-server"></i> 
+                    </div>
+                    <h2 class="card-title">Dependable hosting</h2>
+                    <p class="card-description">Enjoy free hosting powered by a global CDN, with automatic backups to keep your site operational under any circumstances—whether facing traffic surges or unexpected downtime.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-rocket"></i> 
+                    </div>
+                    <h2 class="card-title">Optimized speed</h2>
+                    <p class="card-description">We prioritize speed and seamless functionality, delivering an optimized experience for you and your visitors with quick-loading websites that excel on any device.
+                    </p>
+                </div>
+            </div>
+            <div class="cta">
+                <a href="#" class="btn">Start Blogging</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seventhpage Section -->
+    <section class="seventhpage" id="seventhpage">
+        <div class="content-container">
+            <div class="image-container">
+                <img src="images/seventhpgimg.jpg" alt="Analytics dashboard" />
+            </div>
+            <div class="text-container">
+                <h2>Prepare for the future with integrated analytics</h2>
+                <p>Discover insights from analytics reports, to see which content engages your audience the most, helping you make informed plans for the future.
+                </p>
+                <a href="#" class="btn4">Start blogging →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eighthpage Section -->
+    <section class="eighthpage container" id="eighthpage">
+        <div class="contentBx">
+            <h2 class="titleText">Keep up with the trending topics</h2>
+            <p class="title-text">Staying up to date with the latest trends is essential for any blogger looking to engage with a wider audience. Whether it's trending news, viral content, or hot topics in your niche, keeping your content fresh and relevant helps maintain reader interest. You can track trending topics through social media, online forums, or specialized trend-tracking tools that show what’s popular right now.
+                <br><br>By incorporating trending topics into your blog, you not only stay relevant but also enhance your SEO efforts. Writing about what people are actively searching for ensures that your posts are more likely to be discovered by a broader audience. This can lead to increased traffic and engagement, ultimately helping your blog grow and stand out in a crowded digital space.
+            </p><br><br>
+            <a href="#" class="btn5">Read more</a>
+        </div>
+        <div class="imgBx">
+            <img src="images/eighthpgimg.png" alt="About Image" class="fitBg">
+        </div>
+    </section><br><br><br><br>
+
+    <div class="post-filter container">
+        <span class="filter-item active-filter" data-filter="all">All</span>
+        <span class="filter-item" data-filter="tech">Tech</span>
+        <span class="filter-item" data-filter="food">Food</span>
+        <span class="filter-item" data-filter="news">News</span>
+    </div>
+
+    <div class="post container">
+        <div class="post-box tech">
+            <img src="images/post1.jpg" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="#" class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sapiente.</a>
+            <span class="post-date">09 Nov 2015</span>
+            <p class="post-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis commodi itaque officiis dolores? Aliquam, earum iusto. Accusantium dolorum quaerat necessitatibus reprehenderit, voluptas hic, amet temporibus aspernatur commodi modi cumque quisquam.</p>
+            <div class="profile">
+                <img src="images/postprofile.jpg" alt="" class="profile-img">
+                <span class="profile-name">SCBP</span>
+            </div>
+        </div>
+
+        <div class="post-box food">
+            <img src="images/post2.jpg" alt="" class="post-img">
+            <h2 class="category">Food</h2>
+            <a href="#" class="post-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores.</a>
+            <span class="post-date">14 June 2022</span>
+            <p class="post-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis commodi itaque officiis dolores? Aliquam, earum iusto. Accusantium dolorum quaerat necessitatibus reprehenderit, voluptas hic, amet temporibus aspernatur commodi modi cumque quisquam.</p>
+            <div class="profile">
+                <img src="images/postprofile.jpg" alt="" class="profile-img">
+                <span class="profile-name">NDIO</span>
+            </div>
+        </div>
+
+        <div class="post-box news">
+            <img src="images/post3.jpg" alt="" class="post-img">
+            <h2 class="category">News</h2>
+            <a href="#" class="post-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dolores!</a>
+            <span class="post-date">21 Oct 2024</span>
+            <p class="post-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis commodi itaque officiis dolores? Aliquam, earum iusto. Accusantium dolorum quaerat necessitatibus reprehenderit, voluptas hic, amet temporibus aspernatur commodi modi cumque quisquam.</p>
+            <div class="profile">
+                <img src="images/postprofile.jpg" alt="" class="profile-img">
+                <span class="profile-name">JGSD</span>
+            </div>
+        </div>
+
+        <div class="post-box tech">
+            <img src="images/post4.jpg" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="#" class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sapiente.</a>
+            <span class="post-date">08 Nov 2018</span>
+            <p class="post-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis commodi itaque officiis dolores? Aliquam, earum iusto. Accusantium dolorum quaerat necessitatibus reprehenderit, voluptas hic, amet temporibus aspernatur commodi modi cumque quisquam.</p>
+            <div class="profile">
+                <img src="images/postprofile.jpg" alt="" class="profile-img">
+                <span class="profile-name">SCBP</span>
+            </div>
+        </div>
+
+        <div class="post-box food">
+            <img src="images/post5.jpg" alt="" class="post-img">
+            <h2 class="category">Food</h2>
+            <a href="#" class="post-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores.</a>
+            <span class="post-date">30 Jan 2011</span>
+            <p class="post-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis commodi itaque officiis dolores? Aliquam, earum iusto. Accusantium dolorum quaerat necessitatibus reprehenderit, voluptas hic, amet temporibus aspernatur commodi modi cumque quisquam.</p>
+            <div class="profile">
+                <img src="images/postprofile.jpg" alt="" class="profile-img">
+                <span class="profile-name">NDIO</span>
+            </div>
+        </div>
+
+        <div class="post-box news">
+            <img src="images/post6.jpg" alt="" class="post-img">
+            <h2 class="category">News</h2>
+            <a href="#" class="post-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dolores!</a>
+            <span class="post-date">03 Dec 2023</span>
+            <p class="post-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis commodi itaque officiis dolores? Aliquam, earum iusto. Accusantium dolorum quaerat necessitatibus reprehenderit, voluptas hic, amet temporibus aspernatur commodi modi cumque quisquam.</p>
+            <div class="profile">
+                <img src="images/postprofile.jpg" alt="" class="profile-img">
+                <span class="profile-name">JGSD</span>
+            </div>
+        </div>
+
+        <div class="post-box tech">
+            <img src="images/post7.jpg" alt="" class="post-img">
+            <h2 class="category">Tech</h2>
+            <a href="#" class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, sapiente.</a>
+            <span class="post-date">19 Mar 2017</span>
+            <p class="post-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis commodi itaque officiis dolores? Aliquam, earum iusto. Accusantium dolorum quaerat necessitatibus reprehenderit, voluptas hic, amet temporibus aspernatur commodi modi cumque quisquam.</p>
+            <div class="profile">
+                <img src="images/postprofile.jpg" alt="" class="profile-img">
+                <span class="profile-name">SCBP</span>
+            </div>
+        </div>
+
+        <div class="post-box food">
+            <img src="images/post8.jpg" alt="" class="post-img">
+            <h2 class="category">Food</h2>
+            <a href="#" class="post-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores.</a>
+            <span class="post-date">25 Sep 2021</span>
+            <p class="post-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis commodi itaque officiis dolores? Aliquam, earum iusto. Accusantium dolorum quaerat necessitatibus reprehenderit, voluptas hic, amet temporibus aspernatur commodi modi cumque quisquam.</p>
+            <div class="profile">
+                <img src="images/postprofile.jpg" alt="" class="profile-img">
+                <span class="profile-name">NDIO</span>
+            </div>
+        </div>
+
+        <div class="post-box news">
+            <img src="images/post9.jpg" alt="" class="post-img">
+            <h2 class="category">News</h2>
+            <a href="#" class="post-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, dolores!</a>
+            <span class="post-date">16 Apr 2013</span>
+            <p class="post-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis commodi itaque officiis dolores? Aliquam, earum iusto. Accusantium dolorum quaerat necessitatibus reprehenderit, voluptas hic, amet temporibus aspernatur commodi modi cumque quisquam.</p>
+            <div class="profile">
+                <img src="images/postprofile.jpg" alt="" class="profile-img">
+                <span class="profile-name">JGSD</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ninthpage Section -->
+    <section class="ninthpage" id="ninthpage">
+        <div class="ninthpage container">
+            <h1 class="text_title">Create, share, inspire.</h1>
+            <a href="#" class="btn6">Start Blogging</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section aboutus">
+                <h2>Blogger's Palette</h2>
+                <p>A platform for ideas to flourish and voices to be heard. Create, connect, and share your stories with the world.</p>
+                <p>"Every post is an opportunity to explore, express, and leave a lasting impact."</p>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Explore Templates</a></li>
+                    <li><a href="#">Start Blogging</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact-info">
+                <h2>Contact Info</h2>
+                <ul>
+                    <li>
+                        <span><i class="bx bxs-map"></i></span>
+                        Bangtan, SC 72574<br>
+                        KI
+                    </li>
+                    <li>
+                        <span><i class="bx bx-envelope"></i></span>
+                        <a href="mailto:challirwarsakshi@gmail.com">challirwarsakshi@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <p>© 2024 Blogger's Palette. All rights reserved.</p>
+        </div>
+        <ul class="icons">
+            <li><a href="#"><i class='bx bx-up-arrow-alt'></i></a></li>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" 
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCMQXYzoPM0_69-Qk1ePG2XM6Bw9aqrHCQ",
+            authDomain: "blogger-s-palette.firebaseapp.com",
+            projectId: "blogger-s-palette",
+            storageBucket: "blogger-s-palette.firebasestorage.app",
+            messagingSenderId: "16830628979",
+            appId: "1:16830628979:web:2030d2d9ef488d96d3d606"
+        };
+
+        const app = initializeApp(firebaseConfig);
+
+        const db = getDatabase(app);
+
+        document.getElementById("signup-form-submit").addEventListener('submit', function(e){
+            e.preventDefault();
+            
+            const username = document.getElementById("signup-username").value;
+            const email = document.getElementById("signup-email").value;
+            const password = document.getElementById("signup-password").value;
+        
+            set(ref(db, 'users/' + username), {
+                username: username,
+                email: email,
+                password: password
+            }).then(() => {
+                alert("Sign Up Successful! Please log in to continue.");
+                closeModal();
+            }).catch((error) => {
+                console.error("Error writing to Firebase: ", error);
+                alert("Sign Up failed. Please try again.");
+            });
+        });
+
+        document.getElementById("login-form-submit").addEventListener('submit', function(e){
+            e.preventDefault();
+            
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+        
+            const userRef = ref(db, 'users/');
+            get(userRef).then((snapshot) => {
+                if (snapshot.exists()) {
+                    let userFound = false;
+                    snapshot.forEach((childSnapshot) => {
+                        const userData = childSnapshot.val();
+                        if (userData.email === email && userData.password === password) {
+                            userFound = true;
+                        }
+                    });
+                    if (userFound) {
+                        alert("Login Successful!");
+                    window.location.href = "dashboard.html"; 
+                        closeModal();
+                    } else {
+                        alert("Incorrect credentials. Please try again.");
+                    }
+                } else {
+                    alert("No users found in the database.");
+                }
+            }).catch((error) => {
+                console.error("Error fetching data: ", error);
+            });
+        });
+
+        function closeModal() {
+            document.getElementById("login-signup-modal").style.display = "none";
+        }
+
+        function switchTab(tab) {
+            const loginForm = document.getElementById("login-form");
+            const signupForm = document.getElementById("signup-form");
+            const loginTab = document.getElementById("login-tab");
+            const signupTab = document.getElementById("signup-tab");
+
+            if (tab === 'login') {
+                loginForm.classList.add("active");
+                signupForm.classList.remove("active");
+                loginTab.classList.add("active");
+                signupTab.classList.remove("active");
+            } else {
+                loginForm.classList.remove("active");
+                signupForm.classList.add("active");
+                loginTab.classList.remove("active");
+                signupTab.classList.add("active");
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".filter-item").click(function () {
+                const value = $(this).attr("data-filter");
+                if (value === "all") {
+                    $(".post-box").fadeIn(1000);
+                } else {
+                    $(".post-box")
+                        .not("." + value)
+                        .fadeOut(1000);
+                    $(".post-box")
+                        .filter("." + value)
+                        .fadeIn(1000);
+                }
+            });
+
+            $(".filter-item").click(function () {
+                $(this).addClass("active-filter").siblings().removeClass("active-filter");
+            });
+        });
+    </script>
+
+</body>
+</html>
